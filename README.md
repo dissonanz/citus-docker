@@ -1,6 +1,6 @@
-# citus-rancher
+# citus-docker
 
-Customized to run on Rancher OS
+This fork was customized to be run on Rancher OS
 
 Dockerfile for [CitusDB](https://www.citusdata.com), sharded scalable postgresql database.
 
