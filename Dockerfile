@@ -1,12 +1,12 @@
 # Based off of https://github.com/docker-library/postgres/blob/master/9.4/Dockerfile
 FROM debian:wheezy
-MAINTAINER Heap Analytics https://heapanalytics.com
+MAINTAINER dm-alexey@ya.ru
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r postgres && useradd -r -g postgres postgres
 
 # grab gosu for easy step-down from root
-RUN gpg --keyserver pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4
+RUN gpg --keyserver hkp://pool.sks-keyservers.net:80 --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4
 RUN apt-get update \
     && apt-get install -y curl \
     && rm -rf /var/lib/apt/lists/* \

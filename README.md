@@ -1,4 +1,6 @@
-# citus-docker
+# citus-rancher
+
+Customized to run on Rancher OS
 
 Dockerfile for [CitusDB](https://www.citusdata.com), sharded scalable postgresql database.
 
@@ -15,11 +17,9 @@ should be linked to this container (and should contain `citus` in their name).
 
 ### Testing the image
 
-The image defined in this repo can be tested using [docker compose](https://docs.docker.com/compose/).
+The image defined in this repo can be tested using [Rancher OS](http://docs.rancher.com/).
 
-To launch a citus cluster with a master node and 2 workers:
-
-* `docker-compose up`
+To launch a citus cluster with a master node and 2 workers - create new stack and provide options by docker-compose.yml
 
 For an example for setting up a distributed table and on how to run queries on it,
 see [CitusData docs: Examples with Sample Data](https://www.citusdata.com/docs/examples#amazon-reviews).

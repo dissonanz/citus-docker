@@ -8,6 +8,7 @@ if [ "$1" = 'postgres' ]; then
         gosu postgres initdb
 
         sed -ri "s/^#(listen_addresses\s*=\s*)\S+/\1'*'/" "$PGDATA"/postgresql.conf
+        echo "shared_preload_libraries = 'pg_shard'" >> "$PGDATA"/postgresql.conf
 
         # check password first so we can ouptut the warning before postgres
         # messes it up
