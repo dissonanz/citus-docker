@@ -15,6 +15,10 @@ should be linked to this container (and should contain `citus` in their name).
 
 `CITUS_STANDALONE` marks a citus master as a worker as well.
 
+`RANCHER_ENABLE` tells the `reload-workers.sh` script to use rancher metadata
+
+`PG_SHARD_SERVICE` tells the `reload-workers.sh` script the name of the service with shard containers. Defaults to self's service
+
 ### Testing the image
 
 The image defined in this repo can be tested using [Rancher OS](http://docs.rancher.com/).
